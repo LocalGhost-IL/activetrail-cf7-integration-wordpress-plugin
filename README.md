@@ -1,5 +1,5 @@
-# activetrail-cf7-integration-wordpress-plugin
-=== Plugin Name ===
+﻿# activetrail-cf7-integration-wordpress-plugin
+# Plugin Name
 Contributors: roycegracie,LocalGhost-il
 Donate link: http://www.zeevm.co.il
 Tags: active trail, activetrail, newsletter, contact form 7
@@ -9,8 +9,9 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+-----
 
-== Description ==
+# Description
 
 Integrate contact form 7 to your Active Trail account. this plugin will allow you to send your form details to your active trail account.
 
@@ -24,7 +25,10 @@ The main advantage of this plugin are:
 
 Please see the video:
 [youtube https://www.youtube.com/watch?v=Bwei0VNrK78]
-== Installation ==
+
+-----
+
+# Installation
 
 
 1. Upload `activetrail-addon folder` to the `/wp-content/plugins/` directory
@@ -33,39 +37,32 @@ Please see the video:
 4. follow the instructions on the video on how to connect your account to the form
 5. that is it ! now you the data is send to your active trail account
 
-== Frequently Asked Questions ==
+-----
 
-= How to use this plugin =
+# Frequently Asked Questions
+
+- How to use this plugin
 please see video here:
 [youtube https://www.youtube.com/watch?v=Bwei0VNrK78]
 
-== Screenshots ==
+-----
+
+# Screenshots
 
 1. this is an example of how it will look like 
 
+-----
 
-== Changelog ==
+# Changelog
 
-= 1.0 =
-this is the first version
+- 1.0 - this is the first version
 
+-----
 
-== A brief Markdown Example ==
+# A brief Markdown Example
 
 Ordered list:
 
 1. more options to the admin panel for better flexibility
 2. translation PO&MO files
-
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
 
