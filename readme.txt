@@ -1,4 +1,3 @@
-# activetrail-cf7-integration-wordpress-plugin
 === Plugin Name ===
 Contributors: roycegracie,LocalGhost-il
 Donate link: http://www.zeevm.co.il
@@ -68,4 +67,3 @@ Markdown uses email style notation for blockquotes and I've been told:
 > Asterisks for *emphasis*. Double it up  for **strong**.
 
 `<?php code(); // goes in backticks ?>`
-
