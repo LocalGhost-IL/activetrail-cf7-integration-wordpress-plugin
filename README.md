@@ -13,6 +13,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 # Description
 
+The plugin Page on wordpress.org:
+https://wordpress.org/plugins/activetrail-contact-form-7-integration/
+
 Integrate contact form 7 to your Active Trail account. this plugin will allow you to send your form details to your active trail account.
 
 You can use this plugin to create a Newsletter form with contact form 7. 
