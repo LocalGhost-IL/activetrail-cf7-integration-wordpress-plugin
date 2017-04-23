@@ -3,21 +3,23 @@
 @ini_set("default_socket_timeout" , "300");
 @ini_set("memory_limit","256M");
 
-class MSSoapClient extends SoapClient {
-	public $name_space;
+if( class_exists( 'SoapClient' ) ) {
+	class MSSoapClient extends SoapClient {
+		public $name_space;
 
-	function __doRequest($request, $location, $action, $version) {
-		$request = preg_replace ( '/<ns1:(\w+)/', '<$1 xmlns="' . $this->name_space . '"', $request, 1 );
-		$s = array ('SOAP-ENV', 'xsd:', 'ns1:' );
-		$r = array ('soap', '', '' );
-		$request = str_ireplace ( $s, $r, $request );
-		$request = str_replace ( 'xsi:type="ms_soap_comp"', 'xmlns="http://tempuri.org/"', $request );
-        $request = str_replace ( '<WebCustomer>', '', $request );
-        $request = str_replace ( '</WebCustomer>', '', $request );
-		$request = str_replace ('<SOAP-ENC:Struct xsi:type="WebCustomer">', '<WebCustomer>', $request );        
-		$request = str_replace ('</SOAP-ENC:Struct>', '</WebCustomer>', $request );
-		
-		return parent::__doRequest ( $request, $location, $action, $version );
+		function __doRequest( $request, $location, $action, $version ) {
+			$request = preg_replace( '/<ns1:(\w+)/', '<$1 xmlns="' . $this->name_space . '"', $request, 1 );
+			$s       = array( 'SOAP-ENV', 'xsd:', 'ns1:' );
+			$r       = array( 'soap', '', '' );
+			$request = str_ireplace( $s, $r, $request );
+			$request = str_replace( 'xsi:type="ms_soap_comp"', 'xmlns="http://tempuri.org/"', $request );
+			$request = str_replace( '<WebCustomer>', '', $request );
+			$request = str_replace( '</WebCustomer>', '', $request );
+			$request = str_replace( '<SOAP-ENC:Struct xsi:type="WebCustomer">', '<WebCustomer>', $request );
+			$request = str_replace( '</SOAP-ENC:Struct>', '</WebCustomer>', $request );
+
+			return parent::__doRequest( $request, $location, $action, $version );
+		}
 	}
 }
 
@@ -52,6 +54,9 @@ class Active_Trail {
 		$uri = "wsdl_uri_$location";
 		
 		//Init the client
+		if( !class_exists( 'MSSoapClient' ) ){
+			return false;
+		}
 		$this->client = new MSSoapClient ( $this->$uri, $wsdl_options );
 		$this->client->name_space = $this->name_space;
 

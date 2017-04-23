@@ -33,6 +33,10 @@ function cf7_activetrail_notice() {
     else {
 	    echo '<div class="error"><p>Contact Form 7 is not activated. Contact Form 7 must be installed and activated before you can use the activetrail addon.</p></div>';
 	}
+
+	if( !class_exists( 'SoapClient' ) ){
+		echo '<div class="error"><p><strong>Warning: </strong>Contact Form 7 - activetrail Add-on requires SoapClient php extension installed. Please add the extension via php.ini file or contact your hosting support.</p></div>';
+	}
 }
 add_action( 'admin_notices', 'cf7_activetrail_notice' );
 
