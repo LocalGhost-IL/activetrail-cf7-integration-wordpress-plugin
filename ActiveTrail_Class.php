@@ -7,7 +7,7 @@ if( class_exists( 'SoapClient' ) ) {
 	class MSSoapClient extends SoapClient {
 		public $name_space;
 
-		function __doRequest( $request, $location, $action, $version ) {
+		function __doRequest( $request, $location, $action, $version, $one_way = null ) {
 			$request = preg_replace( '/<ns1:(\w+)/', '<$1 xmlns="' . $this->name_space . '"', $request, 1 );
 			$s       = array( 'SOAP-ENV', 'xsd:', 'ns1:' );
 			$r       = array( 'soap', '', '' );
